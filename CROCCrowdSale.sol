@@ -341,7 +341,7 @@ contract CROCCrowdsale is FinalizableCrowdsale {
      require(!contractPoweredUp);
       
     // Contract should have enough CROC credits
-    require(token.balanceOf(this) >= hardCap);
+    require(token.balanceOf(this) >= tokensAvailableToIco);
     
     endTime = now + durationInMinutes * 1 minutes;
     
